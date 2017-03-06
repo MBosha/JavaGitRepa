@@ -6,7 +6,9 @@ import io.hexlet.java.m101.xo.controller.*;
 
 public class Main {
 
-    public static void main(String... args) {
+
+
+  public static void main(String[] args) {
         final Point p = new Point();
         p.x = 2;
         p.y = 3;

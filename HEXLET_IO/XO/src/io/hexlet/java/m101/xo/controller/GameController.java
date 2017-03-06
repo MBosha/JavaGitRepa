@@ -42,10 +42,10 @@ public class GameController {
     }
 
     private static boolean checkCoordinate(final int coordinate) {
-        if ()coordinate < MIN_COORDINATE || coordinate > MAX_COORDINATE) {
-            return false
+        if (coordinate < MIN_COORDINATE || coordinate > MAX_COORDINATE) {
+            return false;
         }
-        return true;
+        else return true;
     }
 
 
