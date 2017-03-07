@@ -10,6 +10,8 @@ public class GameController {
 
     private final String gameName;
 
+    private final Board board;
+
     private Player[] players;
 
     public GameController (String gameName) {
@@ -22,6 +24,10 @@ public class GameController {
 
     public Player currentPlayer() {
         return null;
+    }
+
+    public Board getBoard() {
+      return board;
     }
 
     public boolean move(final int x, final int y) {
