@@ -1,19 +1,18 @@
 import javax.swing.*;
+import java.awt.*;
 
-public class MyFrame {
+public class MyFrame extends JFrame {
 
-    public static void main (String [] args) {
-        JFrame myWindow = new JFrame("Пробное окно");
-        myWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        myWindow.setSize(400, 300);
-        myWindow.setVisible(true);
-    }
-
-    public class SimpleWindow extends JFrame {
-        SimpleWindow(){
-            super("Пробное окно");
-            setDefaultCloseOperation(EXIT_ON_CLOSE);
-            setSize(250, 100);
-        }
+    MyFrame(int x, int y){
+        super("Пробное окно");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        MyPanel newPanel = new MyPanel();
+        newPanel.setLayout(new FlowLayout());
+        newPanel.add(new MyButton("Кнопка"));
+        newPanel.add(new MyButton("+"));
+        newPanel.add(new MyButton("-"));
+        newPanel.add(new MyButton("Кнопка с длинной надписью"));
+        setContentPane(newPanel);
+        setSize(x, y);
     }
 }
